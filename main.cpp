@@ -1,3 +1,72 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <limits>
+#include <stdexcept>
+#include <string>
+using namespace std;
+
+
+// Error Handling
+int safeInt(const string &prompt = "")
+{
+    int x;
+    while (true)
+    {
+        try
+        {
+            if (!prompt.empty())
+                cout << prompt;
+            cin >> x;
+            if (cin.fail())
+                throw runtime_error("Invalid input! Not an integer.");
+            if (x <= 0)
+                throw runtime_error("Value must be positive!");
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            return x;
+        }
+        catch (runtime_error &e)
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << e.what() << " Enter again.\n";
+        }
+    }
+}
+
+float safeFloat(const string &prompt = "")
+{
+    float x;
+    while (true)
+    {
+        try
+        {
+            if (!prompt.empty())
+                cout << prompt;
+            cin >> x;
+            if (cin.fail())
+                throw runtime_error("Invalid input! Not a number.");
+            if (x < 0)
+                throw runtime_error("Value cannot be negative!");
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            return x;
+        }
+        catch (runtime_error &e)
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << e.what() << " Enter again.\n";
+        }
+    }
+}
+// Generic Function / Template
+template <typename T>
+void displayVector(const vector<T> &v)
+{
+    for (const auto &item : v)
+        item.displayInfo();
+}
+
 // ─────────────────────────────────────────────
 //  BASE: Person
 //  Every human in this system has a name.
