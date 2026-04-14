@@ -260,6 +260,57 @@ public:
     }
 };
 
+//Room class
+
+class Room
+{
+private:
+    int roomNo;
+    string type;
+    float price;
+    bool isBooked;
+
+public:
+    Room() : roomNo(0), type(""), price(0), isBooked(false)
+    {
+    }
+    Room(int r, string t, float p) : roomNo(r), type(t), price(p), isBooked(false)
+    {
+    }
+
+    int getRoomNo() const
+    {
+        return roomNo;
+    }
+    float getPrice() const
+    {
+        return price;
+    }
+    bool getStatus() const
+    {
+        return isBooked;
+    }
+    void book()
+    {
+        isBooked = true;
+    }
+    void free()
+    {
+        isBooked = false;
+    }
+
+    void displayInfo() const
+    {
+        cout << left << setw(10) << roomNo
+             << setw(10) << type
+             << fixed << setprecision(2)
+             << setw(10) << price
+             << setw(10) << (isBooked ? "Booked" : "Free")
+             << endl;
+    }
+};
+
+
 class Customer : public Person
 {
 private:
