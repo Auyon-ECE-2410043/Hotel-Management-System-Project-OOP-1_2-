@@ -144,6 +144,63 @@ public:
     }
 };
 
+//  RIGHT BRANCH: StaffMember
+//  A staff member works shifts and earns a salary.
+//  Uses virtual inheritance → shares Person with AdminBase.
+
+class StaffMember : virtual public Person
+{
+protected:
+    string role;
+    float salary;
+    int shiftHours;
+
+public:
+    StaffMember() : Person()
+    {
+        role = "";
+        salary = 0;
+        shiftHours = 0;
+    }
+    StaffMember(string n, string r, float s, int sh) : Person(n)
+    {
+        role = r;
+        salary = s;
+        shiftHours = sh;
+    }
+
+    void displayInfo() const override
+    {
+        cout << "[Staff] Name: " << name
+             << " | Role: " << role
+             << " | Salary: " << fixed << setprecision(2) << salary
+             << " | Shift: " << shiftHours << "hrs" << endl;
+    }
+
+    string getRole() const
+    {
+        return role;
+    }
+    float getSalary() const
+    {
+        return salary;
+    }
+    int getShift() const
+    {
+        return shiftHours;
+    }
+
+    // Staff can take on extra shifts (overtime)
+    void addOvertime(int extraHours)
+    {
+        shiftHours += extraHours;
+        salary += extraHours * 150.0f; // 150 per extra hour
+        cout << name << " worked " << extraHours
+             << " overtime hours. New salary: " << salary << endl;
+    }
+};
+
+
 //  DIAMOND TIP: Manager
 //
 //  A Manager IS-A AdminBase  → can log in, manage hotel
