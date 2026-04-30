@@ -24,15 +24,22 @@ Course: Object-Oriented Programming (ECE-1204)
 
 | Member | Roll | Video |
 |---|---|---|
-| Auyon Dip Sardar | 2410043 | [▶ Watch on YouTube](https://youtube.com/your-link) |
+| Auyon Dip Sardar | 2410043 | [▶ Watch on YouTube]([https://youtube.com/your-link](https://youtu.be/zMdS_v5NhTA)) |
 | Nishit Ray | 2410044 | [▶ Watch on YouTube](https://youtube.com/your-link) |
 | Ahsan Ullah | 2410045 | [▶ Watch on YouTube](https://youtube.com/your-link) |
 
 ---
 
-## Table of Contents
+## 👨‍💻 Team Contributions
+
+| Member | Roll | Coded Parts |
+|---|---|---|
+| Nishit Ray | 2410044 | `Customer` · `AdminBase` · `Manager` · `Bill` · `Person` |
+| Auyon Dip Sardar | 2410043 | `Hotel` · `main()` |
+| Ahsan Ullah | 2410045 | `safeInt()` · `safeFloat()` · `displayVector<T>()` · `StaffMember` · `Room` |
 
 ---
+
 
 ## Table of Contents
 
@@ -46,6 +53,8 @@ Course: Object-Oriented Programming (ECE-1204)
 8. [Build & Run Instructions](#8-build--run-instructions)
 9. [Limitations & Future Work](#9-limitations--future-work)
 10. [Authors](#10-authors)
+11. [Project Video Presentations](#11-project-video-presentations)
+12. [Team Contributions](#12-team-contributions)
 
 ---
 
