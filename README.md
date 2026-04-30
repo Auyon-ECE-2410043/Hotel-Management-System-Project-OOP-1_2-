@@ -34,8 +34,8 @@ Course: Object-Oriented Programming (ECE-1204)
 
 | Member | Roll | Coded Parts |
 |---|---|---|
-| Nishit Ray | 2410044 | `Customer` · `AdminBase` · `Manager` · `Bill` · `Person` |
 | Auyon Dip Sardar | 2410043 | `Hotel` · `main()` |
+| Nishit Ray | 2410044 | `Customer` · `AdminBase` · `Manager` · `Bill` · `Person` |
 | Ahsan Ullah | 2410045 | `safeInt()` · `safeFloat()` · `displayVector<T>()` · `StaffMember` · `Room` |
 
 ---
